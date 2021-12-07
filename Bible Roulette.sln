@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bible Roulette", "Bible Roulette\Bible Roulette.csproj", "{C54B6565-97E1-41FD-88E7-A74A94F82D46}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C54B6565-97E1-41FD-88E7-A74A94F82D46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C54B6565-97E1-41FD-88E7-A74A94F82D46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C54B6565-97E1-41FD-88E7-A74A94F82D46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C54B6565-97E1-41FD-88E7-A74A94F82D46}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2442DA29-EEF9-4139-92E8-381E1D5D3C68}
+	EndGlobalSection
+EndGlobal
