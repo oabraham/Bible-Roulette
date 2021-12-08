@@ -164,8 +164,22 @@ namespace Bible_Roulette
 
             if (isReal)
             {
+
                 spinBtn.BackColor = Color.Green;
-                MessageBox.Show(BookName + " " + ChapterNumber.ToString() + ":" + VerseNumber.ToString() );
+                
+                String Result = BookName + " " + ChapterNumber.ToString() + ":" + VerseNumber.ToString();
+                
+                DialogResult OpenBrowser = MessageBox.Show(
+                    Result + " Show in browser?",                 
+                    "Landed",                   
+                    MessageBoxButtons.YesNo ,  
+                    MessageBoxIcon.Question); 
+
+                if(OpenBrowser == DialogResult.Yes)
+                {
+                    OpenVerse(Result);
+                }
+
             }
             else
             {
@@ -184,6 +198,29 @@ namespace Bible_Roulette
         private void spinBtn_Click(object sender, EventArgs e)
         {
             RandomizeBox();
+        }
+
+        public void OpenVerse(String verse)
+        {
+            verse = verse.Replace(":", "%3A");
+            verse = verse.Replace(" ", "%20");
+
+            string target = "http://www.biblegateway.com/passage/?search=" + verse + "^&version=KJV";
+
+            try
+            {
+                System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo { FileName = target, UseShellExecute = true });
+            }
+            catch (System.ComponentModel.Win32Exception noBrowser)
+            {
+                if (noBrowser.ErrorCode == -2147467259)
+                    MessageBox.Show(noBrowser.Message);
+            }
+            catch (System.Exception other)
+            {
+                MessageBox.Show(other.Message);
+            }
+
         }
 
         public void InitVerseDataTable()
